@@ -12,6 +12,11 @@
 		2753DF841D1D93E5006EF606 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2753DF821D1D93E5006EF606 /* Main.storyboard */; };
 		2753DF861D1D93E5006EF606 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2753DF851D1D93E5006EF606 /* Assets.xcassets */; };
 		2753DF891D1D93E5006EF606 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2753DF871D1D93E5006EF606 /* LaunchScreen.storyboard */; };
+		2753DF911D1DAADB006EF606 /* ProgressBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2753DF901D1DAADB006EF606 /* ProgressBarController.swift */; };
+		2753DF951D1DAEBC006EF606 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2753DF941D1DAEBC006EF606 /* WebViewController.swift */; };
+		279A3CBD1D21CAFF002EF6DE /* SSZipArchive in Resources */ = {isa = PBXBuildFile; fileRef = 279A3CBC1D21CAFF002EF6DE /* SSZipArchive */; };
+		27FB04E61D218359004D5B4F /* www in Resources */ = {isa = PBXBuildFile; fileRef = 27FB04E51D218359004D5B4F /* www */; };
+		27FB04EE1D21B88D004D5B4F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FB04E91D21B3C6004D5B4F /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,12 @@
 		2753DF851D1D93E5006EF606 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2753DF881D1D93E5006EF606 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2753DF8A1D1D93E5006EF606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2753DF901D1DAADB006EF606 /* ProgressBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBarController.swift; sourceTree = "<group>"; };
+		2753DF941D1DAEBC006EF606 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		279A3CBC1D21CAFF002EF6DE /* SSZipArchive */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SSZipArchive; sourceTree = "<group>"; };
+		27FB04E51D218359004D5B4F /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
+		27FB04E91D21B3C6004D5B4F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		27FB04F01D21BE75004D5B4F /* learn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "learn-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27FB04EE1D21B88D004D5B4F /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +50,7 @@
 		2753DF721D1D93E5006EF606 = {
 			isa = PBXGroup;
 			children = (
+				27FB04E91D21B3C6004D5B4F /* libz.tbd */,
 				2753DF7D1D1D93E5006EF606 /* learn */,
 				2753DF7C1D1D93E5006EF606 /* Products */,
 			);
@@ -54,12 +67,17 @@
 		2753DF7D1D1D93E5006EF606 /* learn */ = {
 			isa = PBXGroup;
 			children = (
+				279A3CBC1D21CAFF002EF6DE /* SSZipArchive */,
+				27FB04E51D218359004D5B4F /* www */,
 				2753DF7E1D1D93E5006EF606 /* AppDelegate.swift */,
 				2753DF801D1D93E5006EF606 /* ViewController.swift */,
 				2753DF821D1D93E5006EF606 /* Main.storyboard */,
 				2753DF851D1D93E5006EF606 /* Assets.xcassets */,
 				2753DF871D1D93E5006EF606 /* LaunchScreen.storyboard */,
 				2753DF8A1D1D93E5006EF606 /* Info.plist */,
+				2753DF901D1DAADB006EF606 /* ProgressBarController.swift */,
+				2753DF941D1DAEBC006EF606 /* WebViewController.swift */,
+				27FB04F01D21BE75004D5B4F /* learn-Bridging-Header.h */,
 			);
 			path = learn;
 			sourceTree = "<group>";
@@ -124,6 +142,8 @@
 			files = (
 				2753DF891D1D93E5006EF606 /* LaunchScreen.storyboard in Resources */,
 				2753DF861D1D93E5006EF606 /* Assets.xcassets in Resources */,
+				279A3CBD1D21CAFF002EF6DE /* SSZipArchive in Resources */,
+				27FB04E61D218359004D5B4F /* www in Resources */,
 				2753DF841D1D93E5006EF606 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,7 +156,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2753DF811D1D93E5006EF606 /* ViewController.swift in Sources */,
+				2753DF911D1DAADB006EF606 /* ProgressBarController.swift in Sources */,
 				2753DF7F1D1D93E5006EF606 /* AppDelegate.swift in Sources */,
+				2753DF951D1DAEBC006EF606 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +277,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.learntron.learn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/$(SWIFT_MODULE_NAME)-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -266,6 +289,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.learntron.learn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/$(SWIFT_MODULE_NAME)-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -288,6 +312,7 @@
 				2753DF8F1D1D93E5006EF606 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
