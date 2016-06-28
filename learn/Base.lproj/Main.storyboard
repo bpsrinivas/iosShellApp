@@ -88,14 +88,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Screen with Progress bar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noR-iy-k2u">
-                                <rect key="frame" x="204" y="289" width="192" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Screen with Progress bar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noR-iy-k2u">
+                                <rect key="frame" x="20" y="146" width="560" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gj9-a3-Ygs">
-                                <rect key="frame" x="250" y="340" width="101" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gj9-a3-Ygs">
+                                <rect key="frame" x="20" y="196" width="560" height="30"/>
                                 <state key="normal" title="Goto WebView"/>
                                 <connections>
                                     <action selector="gotoWebView:" destination="Nee-S5-7m6" eventType="touchUpInside" id="ylR-PH-bNf"/>
@@ -104,6 +104,22 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="noR-iy-k2u" firstAttribute="leading" secondItem="eJ1-cL-QwR" secondAttribute="leading" constant="20" symbolic="YES" id="0Ld-ok-SHA"/>
+                            <constraint firstAttribute="trailing" secondItem="noR-iy-k2u" secondAttribute="trailing" constant="20" symbolic="YES" id="6ZL-uv-C64"/>
+                            <constraint firstItem="gj9-a3-Ygs" firstAttribute="leading" secondItem="eJ1-cL-QwR" secondAttribute="leading" constant="20" symbolic="YES" id="AoO-8O-Qgv"/>
+                            <constraint firstItem="noR-iy-k2u" firstAttribute="top" secondItem="p8j-O8-DMt" secondAttribute="bottom" constant="126" id="JPI-hl-7G0"/>
+                            <constraint firstItem="noR-iy-k2u" firstAttribute="leading" secondItem="eJ1-cL-QwR" secondAttribute="leading" constant="204" id="Qan-gw-qaW"/>
+                            <constraint firstAttribute="trailing" secondItem="noR-iy-k2u" secondAttribute="trailing" constant="204" id="WjU-rd-ogm"/>
+                            <constraint firstAttribute="trailing" secondItem="gj9-a3-Ygs" secondAttribute="trailing" constant="20" symbolic="YES" id="iYA-Iv-6OU"/>
+                            <constraint firstItem="gj9-a3-Ygs" firstAttribute="top" secondItem="noR-iy-k2u" secondAttribute="bottom" constant="29" id="nBc-BV-HGB"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Qan-gw-qaW"/>
+                                <exclude reference="WjU-rd-ogm"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="va8-I3-00k" userLabel="First Responder" sceneMemberID="firstResponder"/>

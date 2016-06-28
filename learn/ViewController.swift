@@ -12,10 +12,10 @@ class ViewController: UIViewController {
     
 
     @IBOutlet weak var zipFileUrl: UITextField!
-
+    var defaultUrl:String = "http://Pradeeps-MacBook-Pro.local:8000/test.zip";
     
     @IBAction func onOkClicked(sender: AnyObject) {
-        zipFileUrl.text = "http://Pradeeps-MacBook-Pro.local:8000/test.zip";
+        
     }
     
     
@@ -28,6 +28,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        zipFileUrl.text = defaultUrl;
     }
 
     override func didReceiveMemoryWarning() {
