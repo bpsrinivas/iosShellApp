@@ -12,6 +12,7 @@
 
 
 #endif /* learn_Bridging_Header_h */
-#import "SSZipArchive/SSZipArchive.h"
+//#import "SSZipArchive/SSZipArchive.h"
+#import "SSZipArchive.h"
 
 

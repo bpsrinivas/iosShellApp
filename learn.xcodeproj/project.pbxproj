@@ -14,7 +14,21 @@
 		2753DF891D1D93E5006EF606 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2753DF871D1D93E5006EF606 /* LaunchScreen.storyboard */; };
 		2753DF911D1DAADB006EF606 /* ProgressBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2753DF901D1DAADB006EF606 /* ProgressBarController.swift */; };
 		2753DF951D1DAEBC006EF606 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2753DF941D1DAEBC006EF606 /* WebViewController.swift */; };
-		279A3CBD1D21CAFF002EF6DE /* SSZipArchive in Resources */ = {isa = PBXBuildFile; fileRef = 279A3CBC1D21CAFF002EF6DE /* SSZipArchive */; };
+		2782F72B1D22EED8006E3BBE /* aescrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 2782F7091D22EED8006E3BBE /* aescrypt.c */; };
+		2782F72C1D22EED8006E3BBE /* aeskey.c in Sources */ = {isa = PBXBuildFile; fileRef = 2782F70A1D22EED8006E3BBE /* aeskey.c */; };
+		2782F72D1D22EED8006E3BBE /* aestab.c in Sources */ = {isa = PBXBuildFile; fileRef = 2782F70C1D22EED8006E3BBE /* aestab.c */; };
+		2782F72E1D22EED8006E3BBE /* entropy.c in Sources */ = {isa = PBXBuildFile; fileRef = 2782F7101D22EED8006E3BBE /* entropy.c */; };
+		2782F72F1D22EED8006E3BBE /* fileenc.c in Sources */ = {isa = PBXBuildFile; fileRef = 2782F7121D22EED8006E3BBE /* fileenc.c */; };
+		2782F7301D22EED8006E3BBE /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 2782F7141D22EED8006E3BBE /* hmac.c */; };
+		2782F7311D22EED8006E3BBE /* prng.c in Sources */ = {isa = PBXBuildFile; fileRef = 2782F7161D22EED8006E3BBE /* prng.c */; };
+		2782F7321D22EED8006E3BBE /* pwd2key.c in Sources */ = {isa = PBXBuildFile; fileRef = 2782F7181D22EED8006E3BBE /* pwd2key.c */; };
+		2782F7331D22EED8006E3BBE /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 2782F71A1D22EED8006E3BBE /* sha1.c */; };
+		2782F7341D22EED8006E3BBE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2782F71D1D22EED8006E3BBE /* Info.plist */; };
+		2782F7351D22EED8006E3BBE /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 2782F7201D22EED8006E3BBE /* ioapi.c */; };
+		2782F7361D22EED8006E3BBE /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 2782F7221D22EED8006E3BBE /* mztools.c */; };
+		2782F7371D22EED8006E3BBE /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 2782F7241D22EED8006E3BBE /* unzip.c */; };
+		2782F7381D22EED8006E3BBE /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 2782F7261D22EED8006E3BBE /* zip.c */; };
+		2782F7391D22EED8006E3BBE /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 2782F7291D22EED8006E3BBE /* SSZipArchive.m */; };
 		27FB04E61D218359004D5B4F /* www in Resources */ = {isa = PBXBuildFile; fileRef = 27FB04E51D218359004D5B4F /* www */; };
 		27FB04EE1D21B88D004D5B4F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FB04E91D21B3C6004D5B4F /* libz.tbd */; };
 /* End PBXBuildFile section */
@@ -29,7 +43,41 @@
 		2753DF8A1D1D93E5006EF606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2753DF901D1DAADB006EF606 /* ProgressBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBarController.swift; sourceTree = "<group>"; };
 		2753DF941D1DAEBC006EF606 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
-		279A3CBC1D21CAFF002EF6DE /* SSZipArchive */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SSZipArchive; sourceTree = "<group>"; };
+		2782F7071D22EED8006E3BBE /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
+		2782F7081D22EED8006E3BBE /* aes_via_ace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes_via_ace.h; sourceTree = "<group>"; };
+		2782F7091D22EED8006E3BBE /* aescrypt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aescrypt.c; sourceTree = "<group>"; };
+		2782F70A1D22EED8006E3BBE /* aeskey.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aeskey.c; sourceTree = "<group>"; };
+		2782F70B1D22EED8006E3BBE /* aesopt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aesopt.h; sourceTree = "<group>"; };
+		2782F70C1D22EED8006E3BBE /* aestab.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aestab.c; sourceTree = "<group>"; };
+		2782F70D1D22EED8006E3BBE /* aestab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aestab.h; sourceTree = "<group>"; };
+		2782F70E1D22EED8006E3BBE /* brg_endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = brg_endian.h; sourceTree = "<group>"; };
+		2782F70F1D22EED8006E3BBE /* brg_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = brg_types.h; sourceTree = "<group>"; };
+		2782F7101D22EED8006E3BBE /* entropy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = entropy.c; sourceTree = "<group>"; };
+		2782F7111D22EED8006E3BBE /* entropy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = entropy.h; sourceTree = "<group>"; };
+		2782F7121D22EED8006E3BBE /* fileenc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fileenc.c; sourceTree = "<group>"; };
+		2782F7131D22EED8006E3BBE /* fileenc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fileenc.h; sourceTree = "<group>"; };
+		2782F7141D22EED8006E3BBE /* hmac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hmac.c; sourceTree = "<group>"; };
+		2782F7151D22EED8006E3BBE /* hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hmac.h; sourceTree = "<group>"; };
+		2782F7161D22EED8006E3BBE /* prng.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = prng.c; sourceTree = "<group>"; };
+		2782F7171D22EED8006E3BBE /* prng.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prng.h; sourceTree = "<group>"; };
+		2782F7181D22EED8006E3BBE /* pwd2key.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pwd2key.c; sourceTree = "<group>"; };
+		2782F7191D22EED8006E3BBE /* pwd2key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pwd2key.h; sourceTree = "<group>"; };
+		2782F71A1D22EED8006E3BBE /* sha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha1.c; sourceTree = "<group>"; };
+		2782F71B1D22EED8006E3BBE /* sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha1.h; sourceTree = "<group>"; };
+		2782F71C1D22EED8006E3BBE /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		2782F71D1D22EED8006E3BBE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2782F71F1D22EED8006E3BBE /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		2782F7201D22EED8006E3BBE /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
+		2782F7211D22EED8006E3BBE /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		2782F7221D22EED8006E3BBE /* mztools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mztools.c; sourceTree = "<group>"; };
+		2782F7231D22EED8006E3BBE /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
+		2782F7241D22EED8006E3BBE /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
+		2782F7251D22EED8006E3BBE /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		2782F7261D22EED8006E3BBE /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
+		2782F7271D22EED8006E3BBE /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		2782F7281D22EED8006E3BBE /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipArchive.h; sourceTree = "<group>"; };
+		2782F7291D22EED8006E3BBE /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchive.m; sourceTree = "<group>"; };
+		2782F72A1D22EED8006E3BBE /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
 		27FB04E51D218359004D5B4F /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
 		27FB04E91D21B3C6004D5B4F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		27FB04F01D21BE75004D5B4F /* learn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "learn-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -51,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				27FB04E91D21B3C6004D5B4F /* libz.tbd */,
+				2782F7051D22EED8006E3BBE /* SSZipArchive */,
 				2753DF7D1D1D93E5006EF606 /* learn */,
 				2753DF7C1D1D93E5006EF606 /* Products */,
 			);
@@ -67,7 +116,6 @@
 		2753DF7D1D1D93E5006EF606 /* learn */ = {
 			isa = PBXGroup;
 			children = (
-				279A3CBC1D21CAFF002EF6DE /* SSZipArchive */,
 				27FB04E51D218359004D5B4F /* www */,
 				2753DF7E1D1D93E5006EF606 /* AppDelegate.swift */,
 				2753DF801D1D93E5006EF606 /* ViewController.swift */,
@@ -80,6 +128,64 @@
 				27FB04F01D21BE75004D5B4F /* learn-Bridging-Header.h */,
 			);
 			path = learn;
+			sourceTree = "<group>";
+		};
+		2782F7051D22EED8006E3BBE /* SSZipArchive */ = {
+			isa = PBXGroup;
+			children = (
+				2782F7061D22EED8006E3BBE /* aes */,
+				2782F71C1D22EED8006E3BBE /* Common.h */,
+				2782F71D1D22EED8006E3BBE /* Info.plist */,
+				2782F71E1D22EED8006E3BBE /* minizip */,
+				2782F7281D22EED8006E3BBE /* SSZipArchive.h */,
+				2782F7291D22EED8006E3BBE /* SSZipArchive.m */,
+				2782F72A1D22EED8006E3BBE /* ZipArchive.h */,
+			);
+			path = SSZipArchive;
+			sourceTree = "<group>";
+		};
+		2782F7061D22EED8006E3BBE /* aes */ = {
+			isa = PBXGroup;
+			children = (
+				2782F7071D22EED8006E3BBE /* aes.h */,
+				2782F7081D22EED8006E3BBE /* aes_via_ace.h */,
+				2782F7091D22EED8006E3BBE /* aescrypt.c */,
+				2782F70A1D22EED8006E3BBE /* aeskey.c */,
+				2782F70B1D22EED8006E3BBE /* aesopt.h */,
+				2782F70C1D22EED8006E3BBE /* aestab.c */,
+				2782F70D1D22EED8006E3BBE /* aestab.h */,
+				2782F70E1D22EED8006E3BBE /* brg_endian.h */,
+				2782F70F1D22EED8006E3BBE /* brg_types.h */,
+				2782F7101D22EED8006E3BBE /* entropy.c */,
+				2782F7111D22EED8006E3BBE /* entropy.h */,
+				2782F7121D22EED8006E3BBE /* fileenc.c */,
+				2782F7131D22EED8006E3BBE /* fileenc.h */,
+				2782F7141D22EED8006E3BBE /* hmac.c */,
+				2782F7151D22EED8006E3BBE /* hmac.h */,
+				2782F7161D22EED8006E3BBE /* prng.c */,
+				2782F7171D22EED8006E3BBE /* prng.h */,
+				2782F7181D22EED8006E3BBE /* pwd2key.c */,
+				2782F7191D22EED8006E3BBE /* pwd2key.h */,
+				2782F71A1D22EED8006E3BBE /* sha1.c */,
+				2782F71B1D22EED8006E3BBE /* sha1.h */,
+			);
+			path = aes;
+			sourceTree = "<group>";
+		};
+		2782F71E1D22EED8006E3BBE /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				2782F71F1D22EED8006E3BBE /* crypt.h */,
+				2782F7201D22EED8006E3BBE /* ioapi.c */,
+				2782F7211D22EED8006E3BBE /* ioapi.h */,
+				2782F7221D22EED8006E3BBE /* mztools.c */,
+				2782F7231D22EED8006E3BBE /* mztools.h */,
+				2782F7241D22EED8006E3BBE /* unzip.c */,
+				2782F7251D22EED8006E3BBE /* unzip.h */,
+				2782F7261D22EED8006E3BBE /* zip.c */,
+				2782F7271D22EED8006E3BBE /* zip.h */,
+			);
+			path = minizip;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,8 +248,8 @@
 			files = (
 				2753DF891D1D93E5006EF606 /* LaunchScreen.storyboard in Resources */,
 				2753DF861D1D93E5006EF606 /* Assets.xcassets in Resources */,
-				279A3CBD1D21CAFF002EF6DE /* SSZipArchive in Resources */,
 				27FB04E61D218359004D5B4F /* www in Resources */,
+				2782F7341D22EED8006E3BBE /* Info.plist in Resources */,
 				2753DF841D1D93E5006EF606 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,10 +261,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2782F7331D22EED8006E3BBE /* sha1.c in Sources */,
+				2782F7301D22EED8006E3BBE /* hmac.c in Sources */,
+				2782F7391D22EED8006E3BBE /* SSZipArchive.m in Sources */,
 				2753DF811D1D93E5006EF606 /* ViewController.swift in Sources */,
 				2753DF911D1DAADB006EF606 /* ProgressBarController.swift in Sources */,
+				2782F72D1D22EED8006E3BBE /* aestab.c in Sources */,
+				2782F7321D22EED8006E3BBE /* pwd2key.c in Sources */,
+				2782F7381D22EED8006E3BBE /* zip.c in Sources */,
+				2782F7351D22EED8006E3BBE /* ioapi.c in Sources */,
+				2782F72F1D22EED8006E3BBE /* fileenc.c in Sources */,
+				2782F72E1D22EED8006E3BBE /* entropy.c in Sources */,
 				2753DF7F1D1D93E5006EF606 /* AppDelegate.swift in Sources */,
+				2782F72C1D22EED8006E3BBE /* aeskey.c in Sources */,
+				2782F72B1D22EED8006E3BBE /* aescrypt.c in Sources */,
 				2753DF951D1DAEBC006EF606 /* WebViewController.swift in Sources */,
+				2782F7311D22EED8006E3BBE /* prng.c in Sources */,
+				2782F7371D22EED8006E3BBE /* unzip.c in Sources */,
+				2782F7361D22EED8006E3BBE /* mztools.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

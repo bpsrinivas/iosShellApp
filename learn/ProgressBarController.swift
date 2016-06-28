@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-
 class ProgressBarController : UIViewController, NSURLSessionDownloadDelegate{
     
     var url:String = "";
@@ -17,26 +15,28 @@ class ProgressBarController : UIViewController, NSURLSessionDownloadDelegate{
     var downloadSession: NSURLSession!;
     var downloadProgress: Double = 0.0;
     
+    var unzippedLocation:String = "";
     
     @IBAction func gotoWebView(sender: AnyObject) {
-        print("Goto Web view now")
-        print("Url to download from \(url)")
+        print("Load html on webview from \(unzippedLocation)");
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let webViewController = segue.destinationViewController as! WebViewController;
+        webViewController.pathToLaunchFile = unzippedLocation;
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Start downloading the file from \(url)");
         let urlObj:NSURL = NSURL(string: url)!;
         let config = NSURLSessionConfiguration.defaultSessionConfiguration()
         let session = NSURLSession(configuration: config, delegate: self, delegateQueue: NSOperationQueue.mainQueue())
-        
         let downloadTask = session.downloadTaskWithURL(urlObj)
         downloadTask.resume()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func URLSession(session: NSURLSession, downloadTask: NSURLSessionDownloadTask, didResumeAtOffset fileOffset: Int64, expectedTotalBytes: Int64) {
@@ -48,37 +48,48 @@ class ProgressBarController : UIViewController, NSURLSessionDownloadDelegate{
         print("downloadProgress: \(downloadProgress)")
     }
     
-    func moveTempFileToDocumentLocation(tempFileLocation:NSURL){
-        let fileManager = NSFileManager.defaultManager()
+    func getLibDirectoryUrl() -> NSURL{
+        let fileManager = NSFileManager.defaultManager();
         let libraryDirectory:NSArray = fileManager.URLsForDirectory(.LibraryDirectory, inDomains: .UserDomainMask);
-        
         let libDirUrl:NSURL = libraryDirectory.firstObject as! NSURL;
-        let destinationURL:NSURL = libDirUrl.URLByAppendingPathComponent("www.zip");
-        
+        return libDirUrl;
+    }
+    
+    func moveTempFileToLibLocation(tempFileLocation:NSURL) -> NSURL{
+        let destinationURL:NSURL = getLibDirectoryUrl().URLByAppendingPathComponent("www.zip");
         let fileData = NSData(contentsOfURL: tempFileLocation);
         let fileDataString = NSString(data: fileData!, encoding: NSUTF8StringEncoding)
         print(fileDataString)
-        fileData?.writeToURL(destinationURL, atomically: false)
-        print("File moved to library    folder of app ");
+        fileData?.writeToURL(destinationURL, atomically: false);
+        return destinationURL;
+    }
+    
+    func unzipFile(zipFilePath:NSURL , unzipLocation:NSURL) -> String{
+        let unzipped = SSZipArchive.unzipFileAtPath(
+            zipFilePath.path,
+            toDestination: unzipLocation.path);
         
-        /*let unzipFolderLocation = libDirUrl.URLByAppendingPathComponent("www_exploded");
-        SSZipArchive.unzipFileAtPath(destinationURL.absoluteString, toDestination: unzipFolderLocation.absoluteString);
-        print("Unzip of file completed !!");*/
+        print("Unzip of file status \(unzipped) !!");
+        print("location :: \(unzipLocation.path)");
+        return unzipLocation.path!;
     }
     
     func URLSession(session: NSURLSession, downloadTask: NSURLSessionDownloadTask, didFinishDownloadingToURL location: NSURL) {
         print("didFinishDownloadingToURL: \(location)")
-        print(downloadTask)
-        
-        moveTempFileToDocumentLocation(location);
+        let zipFileLocation = moveTempFileToLibLocation(location);
+        unzippedLocation = unzipFile(zipFileLocation, unzipLocation:getLibDirectoryUrl());
     }
-
-    
     
     func URLSession(session: NSURLSession, task: NSURLSessionTask, didCompleteWithError error: NSError?) {
         if(error == nil){
             print("Downloaded without error");
         }else{
+            let alertController = UIAlertController(title: "LearnTron", message: "Error occurred during download", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            alertController.addAction(UIAlertAction(title:"Dismiss",style:UIAlertActionStyle.Default,handler: nil))
+            
+            self.presentViewController(alertController, animated: true, completion: nil);
+            
             print("Error on downlodad \(error)")
         }
     }

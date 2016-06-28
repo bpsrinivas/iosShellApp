@@ -10,7 +10,8 @@ import UIKit
 
 class WebViewController : UIViewController{
     
-   
+    var pathToLaunchFile:String = "";
+    
     @IBOutlet weak var learnTronWebView: UIWebView!
     
     func loadAnyUrl(someUrl: String){
@@ -20,13 +21,16 @@ class WebViewController : UIViewController{
     func loadLaunchHtml(htmlPageName: String){
         let url = NSBundle.mainBundle().URLForResource(htmlPageName,
                                                        withExtension:"html",
-                                                       subdirectory: "www")
+                                                       subdirectory: "lib")
         learnTronWebView.loadRequest(NSURLRequest(URL: url!));
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadLaunchHtml("index");
+        print("web view should load file from the path");
+        let launchUrl = ProgressBarController().getLibDirectoryUrl().URLByAppendingPathComponent("test/index.html");
+        print("\(launchUrl.absoluteString)");
+        learnTronWebView.loadRequest(NSURLRequest(URL: launchUrl));
     }
     
     override func didReceiveMemoryWarning() {

@@ -16,9 +16,6 @@ class ViewController: UIViewController {
     
     @IBAction func onOkClicked(sender: AnyObject) {
         zipFileUrl.text = "http://Pradeeps-MacBook-Pro.local:8000/test.zip";
-        print("I have been clicked ")
-        print("The url to download the file from is \(zipFileUrl.text)")
-        
     }
     
     
