@@ -88,39 +88,69 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Screen with Progress bar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noR-iy-k2u">
-                                <rect key="frame" x="20" y="146" width="560" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gj9-a3-Ygs">
-                                <rect key="frame" x="20" y="196" width="560" height="30"/>
-                                <state key="normal" title="Goto WebView"/>
-                                <connections>
-                                    <action selector="gotoWebView:" destination="Nee-S5-7m6" eventType="touchUpInside" id="ylR-PH-bNf"/>
-                                    <segue destination="vVl-2h-MZs" kind="presentation" id="heR-M9-x0e"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="Ri4-VG-Rak">
+                                <rect key="frame" x="172" y="247" width="256" height="106"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hold Tight !! Setting up Learntron" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noR-iy-k2u">
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uAz-B4-bU7">
+                                        <rect key="frame" x="112" y="52" width="32" height="21"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKV-JA-otR">
+                                                <rect key="frame" x="0.0" y="0.0" width="11" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGK-Hy-Cnw">
+                                                <rect key="frame" x="19" y="0.0" width="13" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RWc-Fc-fxW">
+                                        <rect key="frame" x="28" y="104" width="200" height="2"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="8Hx-a7-2K8"/>
+                                            <constraint firstAttribute="width" constant="200" id="QSj-3s-Tys"/>
+                                            <constraint firstAttribute="width" constant="200" id="eP5-ho-Lsy"/>
+                                            <constraint firstAttribute="width" constant="150" id="fXP-EV-pTx"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="eP5-ho-Lsy"/>
+                                                <exclude reference="fXP-EV-pTx"/>
+                                            </mask>
+                                        </variation>
+                                    </progressView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="RWc-Fc-fxW" firstAttribute="leading" secondItem="Ri4-VG-Rak" secondAttribute="leading" constant="28" id="SE1-ZN-hkB"/>
+                                    <constraint firstItem="RWc-Fc-fxW" firstAttribute="centerX" secondItem="Ri4-VG-Rak" secondAttribute="centerX" id="dKZ-xK-dtU"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="SE1-ZN-hkB"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="noR-iy-k2u" firstAttribute="leading" secondItem="eJ1-cL-QwR" secondAttribute="leading" constant="20" symbolic="YES" id="0Ld-ok-SHA"/>
-                            <constraint firstAttribute="trailing" secondItem="noR-iy-k2u" secondAttribute="trailing" constant="20" symbolic="YES" id="6ZL-uv-C64"/>
-                            <constraint firstItem="gj9-a3-Ygs" firstAttribute="leading" secondItem="eJ1-cL-QwR" secondAttribute="leading" constant="20" symbolic="YES" id="AoO-8O-Qgv"/>
-                            <constraint firstItem="noR-iy-k2u" firstAttribute="top" secondItem="p8j-O8-DMt" secondAttribute="bottom" constant="126" id="JPI-hl-7G0"/>
-                            <constraint firstItem="noR-iy-k2u" firstAttribute="leading" secondItem="eJ1-cL-QwR" secondAttribute="leading" constant="204" id="Qan-gw-qaW"/>
-                            <constraint firstAttribute="trailing" secondItem="noR-iy-k2u" secondAttribute="trailing" constant="204" id="WjU-rd-ogm"/>
-                            <constraint firstAttribute="trailing" secondItem="gj9-a3-Ygs" secondAttribute="trailing" constant="20" symbolic="YES" id="iYA-Iv-6OU"/>
-                            <constraint firstItem="gj9-a3-Ygs" firstAttribute="top" secondItem="noR-iy-k2u" secondAttribute="bottom" constant="29" id="nBc-BV-HGB"/>
+                            <constraint firstItem="Ri4-VG-Rak" firstAttribute="centerX" secondItem="eJ1-cL-QwR" secondAttribute="centerX" id="eB6-QE-nwA"/>
+                            <constraint firstItem="Ri4-VG-Rak" firstAttribute="centerY" secondItem="eJ1-cL-QwR" secondAttribute="centerY" id="yfv-VL-Xwx"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="Qan-gw-qaW"/>
-                                <exclude reference="WjU-rd-ogm"/>
-                            </mask>
-                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="progressBar" destination="RWc-Fc-fxW" id="Fhc-8j-KQs"/>
+                        <outlet property="progressPercentage" destination="TKV-JA-otR" id="4At-Ue-NmU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="va8-I3-00k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -129,7 +159,7 @@
         <!--Web View Controller-->
         <scene sceneID="EgC-oZ-9LY">
             <objects>
-                <viewController id="vVl-2h-MZs" customClass="WebViewController" customModule="learn" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="webViewController" id="vVl-2h-MZs" customClass="WebViewController" customModule="learn" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="J2F-6X-bPB"/>
                         <viewControllerLayoutGuide type="bottom" id="2qy-uZ-8SX"/>
@@ -138,6 +168,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="fyi-Kw-CqL">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oUY-F6-SVo">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <subviews>
@@ -162,6 +195,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="busyThrobber" destination="fyi-Kw-CqL" id="cwT-U4-mDR"/>
                         <outlet property="learnTronWebView" destination="vlK-rq-1bL" id="xBJ-He-IZa"/>
                     </connections>
                 </viewController>

@@ -14,12 +14,10 @@ class ProgressBarController : UIViewController, NSURLSessionDownloadDelegate{
     var downLoadTask: NSURLSessionDownloadTask!;
     var downloadSession: NSURLSession!;
     var downloadProgress: Double = 0.0;
-    
     var unzippedLocation:String = "";
     
-    @IBAction func gotoWebView(sender: AnyObject) {
-        print("Load html on webview from \(unzippedLocation)");
-    }
+    @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet weak var progressPercentage: UILabel!
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let webViewController = segue.destinationViewController as! WebViewController;
@@ -40,12 +38,28 @@ class ProgressBarController : UIViewController, NSURLSessionDownloadDelegate{
     }
     
     func URLSession(session: NSURLSession, downloadTask: NSURLSessionDownloadTask, didResumeAtOffset fileOffset: Int64, expectedTotalBytes: Int64) {
-        print("didResumeAtOffset: \(fileOffset)")
     }
     
     func URLSession(session: NSURLSession, downloadTask: NSURLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
         downloadProgress = Double(totalBytesWritten) / Double(totalBytesExpectedToWrite)
         print("downloadProgress: \(downloadProgress)")
+        updateProgress(downloadProgress);
+    }
+    
+    
+    func moveToWebViewController(unzippedLocation:String){
+        print("move to Web View Controller \(unzippedLocation)");
+        
+        let nextController = self.storyboard?.instantiateViewControllerWithIdentifier("webViewController") as! WebViewController;
+        
+        nextController.pathToLaunchFile = unzippedLocation;
+        self.presentViewController(nextController, animated: true, completion: nil);
+    }
+    
+    func updateProgress(downloadProgress:Double){
+        print("progress percentage \(downloadProgress)");
+        progressBar.setProgress(Float(downloadProgress), animated: true)
+        progressPercentage.text = String(format: "%.0f",downloadProgress * 100);
     }
     
     func getLibDirectoryUrl() -> NSURL{
@@ -78,6 +92,7 @@ class ProgressBarController : UIViewController, NSURLSessionDownloadDelegate{
         print("didFinishDownloadingToURL: \(location)")
         let zipFileLocation = moveTempFileToLibLocation(location);
         unzippedLocation = unzipFile(zipFileLocation, unzipLocation:getLibDirectoryUrl());
+        moveToWebViewController(unzippedLocation);
     }
     
     func URLSession(session: NSURLSession, task: NSURLSessionTask, didCompleteWithError error: NSError?) {
@@ -93,12 +108,4 @@ class ProgressBarController : UIViewController, NSURLSessionDownloadDelegate{
             print("Error on downlodad \(error)")
         }
     }
-    
-    
-    
-
-    
-    
-    
-
 }

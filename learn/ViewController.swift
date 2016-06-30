@@ -12,12 +12,15 @@ class ViewController: UIViewController {
     
 
     @IBOutlet weak var zipFileUrl: UITextField!
-    var defaultUrl:String = "http://Pradeeps-MacBook-Pro.local:8000/test.zip";
+    
+    var defaultUrl:String = Constants.defaultZipFileUrl;
     
     @IBAction func onOkClicked(sender: AnyObject) {
-        
     }
     
+    func onViewLoaded(){
+        zipFileUrl.text = defaultUrl;
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let progressBarController = segue.destinationViewController as?ProgressBarController
@@ -28,14 +31,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        zipFileUrl.text = defaultUrl;
+        onViewLoaded();
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 
 }
 
