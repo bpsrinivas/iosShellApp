@@ -54,16 +54,53 @@ class WebViewController : UIViewController, UIWebViewDelegate{
         //executeJSOnWebView("alert('the html page is loaded, This js is inititaed from web view');")
     }
     
+    /* Methods to be called from Javascript -- START */
+    
     func printOnIosFromJS(str:String){
         print(str);
     }
     
+    func navigateToUrlEntryScreen(){
+        print("Navigate to the url entry screen now ");
+        let nextController = self.storyboard?.instantiateViewControllerWithIdentifier("urlEntryViewController") as! ViewController;
+        self.presentViewController(nextController, animated: true, completion: nil);
+    }
+    
+    
+    /* Methods to be called from Javascript -- END */
+    
+    func getQueryParamFromStr(str:String) -> [String:String]{
+        let str1 = str.stringByRemovingPercentEncoding!;
+        let components = str1.componentsSeparatedByString("?");
+        print(components)
+        let paramString = components[1];
+        let paramComponents = paramString.componentsSeparatedByString("&");
+        var d = [String:String]();
+        
+        for paramsComp in paramComponents{
+            var pair = paramsComp.componentsSeparatedByString("=");
+            d.updateValue(pair[1], forKey: pair[0]);
+        }
+        return d;
+    }
+    
+    
     func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-        print("request for \(request.URL?.path)")
-        if request.URL!.scheme == "learntron://" {
-            print("Hello JavaScript...")
-            print(request.URL?.path);
-            print(request.URL?.parameterString);
+        print("request for \(request.URL!.absoluteString)")
+        let absoluteUrl = request.URL!.absoluteString;
+        print("sheme --> \(request.URL!.scheme)");
+        
+        if request.URL != nil && request.URL!.scheme == "learntron" {
+            print("------ JS CALLED ME --------")
+            let methodName = request.URL!.host!;
+            switch methodName {
+                case "printOnIosFromJS":
+                    printOnIosFromJS(getQueryParamFromStr(absoluteUrl)["str"]!);
+                case "navigateToUrlEntryScreen":
+                    navigateToUrlEntryScreen();
+            default:
+                    print("INVALID METHOD NAME");
+            }
             return false;
         }else{
             return true;

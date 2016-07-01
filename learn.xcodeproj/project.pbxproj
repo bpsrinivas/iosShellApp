@@ -35,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2726C60A1D26F06B0071D59F /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		2753DF7B1D1D93E5006EF606 /* learn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = learn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2753DF7E1D1D93E5006EF606 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2753DF801D1D93E5006EF606 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +101,7 @@
 		2753DF721D1D93E5006EF606 = {
 			isa = PBXGroup;
 			children = (
+				2726C60A1D26F06B0071D59F /* MyPlayground.playground */,
 				27FB04E91D21B3C6004D5B4F /* libz.tbd */,
 				2782F7051D22EED8006E3BBE /* SSZipArchive */,
 				2753DF7D1D1D93E5006EF606 /* learn */,
