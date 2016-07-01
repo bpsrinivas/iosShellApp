@@ -1,5 +1,5 @@
 //: Playground - noun: a place where people can play
-
+/*
 import Cocoa
 
 var str = "Hello, playground"
@@ -22,5 +22,5 @@ func getQueryParamFromStr(str:String) -> [String:String]{
     return d;
 }
 
-getQueryParamFromStr(str2)["str"];
+getQueryParamFromStr(str2)["str"];*/
 

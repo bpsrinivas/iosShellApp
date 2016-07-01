@@ -30,7 +30,6 @@
 		2782F7381D22EED8006E3BBE /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 2782F7261D22EED8006E3BBE /* zip.c */; };
 		2782F7391D22EED8006E3BBE /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 2782F7291D22EED8006E3BBE /* SSZipArchive.m */; };
 		2798ED1F1D25A1E9007F542D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2798ED1E1D25A1E9007F542D /* Constants.swift */; };
-		27FB04E61D218359004D5B4F /* www in Resources */ = {isa = PBXBuildFile; fileRef = 27FB04E51D218359004D5B4F /* www */; };
 		27FB04EE1D21B88D004D5B4F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FB04E91D21B3C6004D5B4F /* libz.tbd */; };
 /* End PBXBuildFile section */
 
@@ -81,7 +80,6 @@
 		2782F7291D22EED8006E3BBE /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchive.m; sourceTree = "<group>"; };
 		2782F72A1D22EED8006E3BBE /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
 		2798ED1E1D25A1E9007F542D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		27FB04E51D218359004D5B4F /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
 		27FB04E91D21B3C6004D5B4F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		27FB04F01D21BE75004D5B4F /* learn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "learn-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,7 +118,6 @@
 		2753DF7D1D1D93E5006EF606 /* learn */ = {
 			isa = PBXGroup;
 			children = (
-				27FB04E51D218359004D5B4F /* www */,
 				2753DF7E1D1D93E5006EF606 /* AppDelegate.swift */,
 				2753DF801D1D93E5006EF606 /* ViewController.swift */,
 				2753DF821D1D93E5006EF606 /* Main.storyboard */,
@@ -253,7 +250,6 @@
 			files = (
 				2753DF891D1D93E5006EF606 /* LaunchScreen.storyboard in Resources */,
 				2753DF861D1D93E5006EF606 /* Assets.xcassets in Resources */,
-				27FB04E61D218359004D5B4F /* www in Resources */,
 				2782F7341D22EED8006E3BBE /* Info.plist in Resources */,
 				2753DF841D1D93E5006EF606 /* Main.storyboard in Resources */,
 			);
