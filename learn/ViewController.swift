@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     var defaultUrl:String = Constants.defaultZipFileUrl;
     
     @IBAction func onOkClicked(sender: AnyObject) {
+        
     }
     
     func onViewLoaded(){
@@ -26,6 +27,18 @@ class ViewController: UIViewController {
         let progressBarController = segue.destinationViewController as?ProgressBarController
         progressBarController!.url = zipFileUrl.text!;
     }
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if(Reachability.isConnectedToNetwork()){
+            return true;
+        }else{
+            let alertController = UIAlertController(title: "LearnTron", message: "You are not connected to Internet", preferredStyle: UIAlertControllerStyle.Alert);
+        
+            alertController.addAction(UIAlertAction(title:"Ok", style: UIAlertActionStyle.Default, handler: nil));
+            return false;
+        }
+    }
+    
     
     
     override func viewDidLoad() {

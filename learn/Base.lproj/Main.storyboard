@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,54 +17,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LearnTron" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L9K-wi-bJ7">
-                                <rect key="frame" x="20" y="110" width="560" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="uxs-Ol-Rm2">
-                                <rect key="frame" x="20" y="196" width="560" height="67"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="uxs-Ol-Rm2">
+                                <rect key="frame" x="50" y="206" width="500" height="188"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LearnTron" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L9K-wi-bJ7">
+                                        <rect key="frame" x="185" y="0.0" width="131" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zip File Url" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XpC-hh-jKB">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
+                                        <rect key="frame" x="0.0" y="76" width="500" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfy-ZM-pzq">
-                                        <rect key="frame" x="265" y="37" width="30" height="30"/>
+                                        <rect key="frame" x="235" y="152" width="30" height="36"/>
                                         <state key="normal" title="Ok"/>
                                         <connections>
                                             <action selector="onOkClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vmJ-pw-77u"/>
-                                            <segue destination="Nee-S5-7m6" kind="presentation" id="zYd-DY-nYV"/>
+                                            <segue destination="Nee-S5-7m6" kind="show" action="showDetailViewController:sender:" id="zYd-DY-nYV"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="XpC-hh-jKB" firstAttribute="top" secondItem="uxs-Ol-Rm2" secondAttribute="top" id="CXu-iG-JqT"/>
                                     <constraint firstAttribute="trailing" secondItem="XpC-hh-jKB" secondAttribute="trailing" id="DXT-mW-HC5"/>
-                                    <constraint firstItem="XpC-hh-jKB" firstAttribute="leading" secondItem="uxs-Ol-Rm2" secondAttribute="leadingMargin" constant="50" id="gbU-Ag-pxq"/>
+                                    <constraint firstAttribute="width" constant="500" id="bGd-68-rex">
+                                        <variation key="widthClass=compact" constant="300"/>
+                                    </constraint>
                                     <constraint firstItem="XpC-hh-jKB" firstAttribute="leading" secondItem="uxs-Ol-Rm2" secondAttribute="leading" id="r2A-3i-IA3"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="XpC-hh-jKB" secondAttribute="trailing" constant="267" id="t5L-lH-7YQ"/>
-                                    <constraint firstItem="XpC-hh-jKB" firstAttribute="top" secondItem="uxs-Ol-Rm2" secondAttribute="topMargin" id="tru-eE-oOl"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="gbU-Ag-pxq"/>
-                                        <exclude reference="t5L-lH-7YQ"/>
-                                        <exclude reference="tru-eE-oOl"/>
-                                    </mask>
-                                </variation>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="L9K-wi-bJ7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="EXH-aU-xZw"/>
-                            <constraint firstAttribute="trailing" secondItem="uxs-Ol-Rm2" secondAttribute="trailing" constant="20" symbolic="YES" id="POb-or-ANY"/>
-                            <constraint firstItem="uxs-Ol-Rm2" firstAttribute="top" secondItem="L9K-wi-bJ7" secondAttribute="bottom" constant="50" id="jiD-pz-hlh"/>
-                            <constraint firstItem="uxs-Ol-Rm2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="jt2-Qo-CEM"/>
-                            <constraint firstAttribute="trailing" secondItem="L9K-wi-bJ7" secondAttribute="trailing" constant="20" symbolic="YES" id="ssy-4l-poj"/>
-                            <constraint firstItem="L9K-wi-bJ7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="90" id="w36-BU-JIK"/>
+                            <constraint firstItem="uxs-Ol-Rm2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XsU-cQ-hwJ"/>
+                            <constraint firstItem="uxs-Ol-Rm2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gsS-uD-D9J"/>
                         </constraints>
                     </view>
                     <connections>

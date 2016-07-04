@@ -30,6 +30,7 @@
 		2782F7381D22EED8006E3BBE /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 2782F7261D22EED8006E3BBE /* zip.c */; };
 		2782F7391D22EED8006E3BBE /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 2782F7291D22EED8006E3BBE /* SSZipArchive.m */; };
 		2798ED1F1D25A1E9007F542D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2798ED1E1D25A1E9007F542D /* Constants.swift */; };
+		27998AD41D2AF44A0081681B /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27998AD31D2AF4490081681B /* Reachability.swift */; };
 		27FB04EE1D21B88D004D5B4F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FB04E91D21B3C6004D5B4F /* libz.tbd */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,7 @@
 		2782F7291D22EED8006E3BBE /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchive.m; sourceTree = "<group>"; };
 		2782F72A1D22EED8006E3BBE /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
 		2798ED1E1D25A1E9007F542D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		27998AD31D2AF4490081681B /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		27FB04E91D21B3C6004D5B4F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		27FB04F01D21BE75004D5B4F /* learn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "learn-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +130,7 @@
 				2753DF941D1DAEBC006EF606 /* WebViewController.swift */,
 				27FB04F01D21BE75004D5B4F /* learn-Bridging-Header.h */,
 				2798ED1E1D25A1E9007F542D /* Constants.swift */,
+				27998AD31D2AF4490081681B /* Reachability.swift */,
 			);
 			path = learn;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				2753DF951D1DAEBC006EF606 /* WebViewController.swift in Sources */,
 				2782F7311D22EED8006E3BBE /* prng.c in Sources */,
 				2782F7371D22EED8006E3BBE /* unzip.c in Sources */,
+				27998AD41D2AF44A0081681B /* Reachability.swift in Sources */,
 				2782F7361D22EED8006E3BBE /* mztools.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

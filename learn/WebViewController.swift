@@ -24,7 +24,11 @@ class WebViewController : UIViewController, UIWebViewDelegate{
     override func viewDidLoad() {
         print("webViewController comes to view did load");
         super.viewDidLoad();
-        onViewLoaded();
+       
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+         onViewLoaded();
     }
     
     

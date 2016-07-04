@@ -95,13 +95,23 @@ class ProgressBarController : UIViewController, NSURLSessionDownloadDelegate{
         moveToWebViewController(unzippedLocation);
     }
     
+    func navigateToUrlEntryScreen(){
+        let nextController = self.storyboard?.instantiateViewControllerWithIdentifier("urlEntryViewController") as! ViewController;
+        self.presentViewController(nextController, animated: true, completion: nil);
+    }
+    
+    func alertOkHandler(action:UIAlertAction){
+        print("on ok clicked in error dialog");
+        navigateToUrlEntryScreen();
+    }
+    
     func URLSession(session: NSURLSession, task: NSURLSessionTask, didCompleteWithError error: NSError?) {
         if(error == nil){
             print("Downloaded without error");
         }else{
             let alertController = UIAlertController(title: "LearnTron", message: "Error occurred during download", preferredStyle: UIAlertControllerStyle.Alert)
             
-            alertController.addAction(UIAlertAction(title:"Dismiss",style:UIAlertActionStyle.Default,handler: nil))
+            alertController.addAction(UIAlertAction(title:"Dismiss",style:UIAlertActionStyle.Default,handler:alertOkHandler))
             
             self.presentViewController(alertController, animated: true, completion: nil);
             
