@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		270219941D2C2D280023472B /* Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270219931D2C2D280023472B /* Commons.swift */; };
 		2753DF7F1D1D93E5006EF606 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2753DF7E1D1D93E5006EF606 /* AppDelegate.swift */; };
 		2753DF811D1D93E5006EF606 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2753DF801D1D93E5006EF606 /* ViewController.swift */; };
 		2753DF841D1D93E5006EF606 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2753DF821D1D93E5006EF606 /* Main.storyboard */; };
@@ -35,7 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2726C60A1D26F06B0071D59F /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		270219931D2C2D280023472B /* Commons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commons.swift; sourceTree = "<group>"; };
 		2753DF7B1D1D93E5006EF606 /* learn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = learn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2753DF7E1D1D93E5006EF606 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2753DF801D1D93E5006EF606 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,7 +102,6 @@
 		2753DF721D1D93E5006EF606 = {
 			isa = PBXGroup;
 			children = (
-				2726C60A1D26F06B0071D59F /* MyPlayground.playground */,
 				27FB04E91D21B3C6004D5B4F /* libz.tbd */,
 				2782F7051D22EED8006E3BBE /* SSZipArchive */,
 				2753DF7D1D1D93E5006EF606 /* learn */,
@@ -131,6 +131,7 @@
 				27FB04F01D21BE75004D5B4F /* learn-Bridging-Header.h */,
 				2798ED1E1D25A1E9007F542D /* Constants.swift */,
 				27998AD31D2AF4490081681B /* Reachability.swift */,
+				270219931D2C2D280023472B /* Commons.swift */,
 			);
 			path = learn;
 			sourceTree = "<group>";
@@ -272,6 +273,7 @@
 				2753DF811D1D93E5006EF606 /* ViewController.swift in Sources */,
 				2753DF911D1DAADB006EF606 /* ProgressBarController.swift in Sources */,
 				2782F72D1D22EED8006E3BBE /* aestab.c in Sources */,
+				270219941D2C2D280023472B /* Commons.swift in Sources */,
 				2782F7321D22EED8006E3BBE /* pwd2key.c in Sources */,
 				2782F7381D22EED8006E3BBE /* zip.c in Sources */,
 				2782F7351D22EED8006E3BBE /* ioapi.c in Sources */,

@@ -15,10 +15,6 @@ class ViewController: UIViewController {
     
     var defaultUrl:String = Constants.defaultZipFileUrl;
     
-    @IBAction func onOkClicked(sender: AnyObject) {
-        
-    }
-    
     func onViewLoaded(){
         zipFileUrl.text = defaultUrl;
     }
@@ -29,17 +25,12 @@ class ViewController: UIViewController {
     }
     
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
-        if(Reachability.isConnectedToNetwork()){
-            return true;
-        }else{
-            let alertController = UIAlertController(title: "LearnTron", message: "You are not connected to Internet", preferredStyle: UIAlertControllerStyle.Alert);
-        
-            alertController.addAction(UIAlertAction(title:"Ok", style: UIAlertActionStyle.Default, handler: nil));
+        if(!Commons.isNetworkAvailable()){
+            Commons.showOkAlert(self, msg:"No internet connection .. Please check !!", handler:nil);
             return false;
         }
+        return true;
     }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

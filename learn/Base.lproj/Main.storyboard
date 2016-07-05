@@ -35,7 +35,6 @@
                                         <rect key="frame" x="235" y="152" width="30" height="36"/>
                                         <state key="normal" title="Ok"/>
                                         <connections>
-                                            <action selector="onOkClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vmJ-pw-77u"/>
                                             <segue destination="Nee-S5-7m6" kind="show" action="showDetailViewController:sender:" id="zYd-DY-nYV"/>
                                         </connections>
                                     </button>
@@ -155,30 +154,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="fyi-Kw-CqL">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vlK-rq-1bL">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="fyi-Kw-CqL">
                                 <rect key="frame" x="290" y="290" width="20" height="20"/>
                             </activityIndicatorView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oUY-F6-SVo">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="k5Q-ww-Ox0">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
-                                        <subviews>
-                                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vlK-rq-1bL">
-                                                <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
-                                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
-                                            </webView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="oUY-F6-SVo" secondAttribute="trailing" id="8Eb-DC-MjS"/>
-                            <constraint firstItem="2qy-uZ-8SX" firstAttribute="top" secondItem="oUY-F6-SVo" secondAttribute="bottom" id="EAa-3s-tyf"/>
-                            <constraint firstItem="oUY-F6-SVo" firstAttribute="top" secondItem="J2F-6X-bPB" secondAttribute="bottom" id="ekE-IE-sZK"/>
-                            <constraint firstItem="oUY-F6-SVo" firstAttribute="leading" secondItem="YK1-TB-68D" secondAttribute="leading" id="rab-jl-q1t"/>
+                            <constraint firstItem="fyi-Kw-CqL" firstAttribute="centerX" secondItem="YK1-TB-68D" secondAttribute="centerX" id="5BE-If-zsV"/>
+                            <constraint firstItem="vlK-rq-1bL" firstAttribute="leading" secondItem="YK1-TB-68D" secondAttribute="leading" id="VkO-1s-lYV"/>
+                            <constraint firstItem="2qy-uZ-8SX" firstAttribute="top" secondItem="vlK-rq-1bL" secondAttribute="bottom" id="gkx-lP-JnN"/>
+                            <constraint firstAttribute="trailing" secondItem="vlK-rq-1bL" secondAttribute="trailing" id="tMT-UW-ADY"/>
+                            <constraint firstItem="vlK-rq-1bL" firstAttribute="top" secondItem="YK1-TB-68D" secondAttribute="top" id="vWj-7f-827"/>
+                            <constraint firstItem="fyi-Kw-CqL" firstAttribute="centerY" secondItem="YK1-TB-68D" secondAttribute="centerY" id="yTh-sT-iN7"/>
                         </constraints>
                     </view>
                     <connections>
